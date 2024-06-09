@@ -576,12 +576,20 @@ video {
   height: 16rem;
 }
 
+.h-8{
+  height: 2rem;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
 
 .w-6{
   width: 1.5rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-full{
@@ -660,14 +668,14 @@ video {
   font-family: "Press Start 2P", cursive;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold{
