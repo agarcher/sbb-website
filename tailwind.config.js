@@ -5,7 +5,11 @@ module.exports = {
       fontFamily: {
         "press-start": ['"Press Start 2P"', "cursive"],
       },
+      listStyleType: {
+        square: 'square',
+      },
     },
   },
+  variants: {},
   plugins: [],
 };
