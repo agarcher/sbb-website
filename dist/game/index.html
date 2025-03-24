@@ -41,6 +41,7 @@
         font-family: Arial, sans-serif;
         font-size: 24px;
         z-index: 100;
+        line-height: 1.4;
       }
       #game-over {
         position: absolute;
@@ -56,6 +57,11 @@
       }
       #game-over-message {
         margin-bottom: 20px;
+      }
+      #game-over-stats {
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 1.4;
       }
       #restart-button {
         margin-top: 20px;
@@ -78,15 +84,16 @@
         opacity: 0.7;
       }
     </style>
-    <script type="module" crossorigin src="/game/assets/main-CIuPNJ2c.js"></script>
+    <script type="module" crossorigin src="/game/assets/main-dy8NFMNt.js"></script>
   </head>
   <body>
     <div class="game-container-wrapper">
       <div class="aspect-ratio-box">
         <div id="game-container"></div>
-        <div id="score">Score: 0</div>
+        <div id="score">Distance: 0 m<br />Time: 00:00.00</div>
         <div id="game-over">
           <div id="game-over-message">Game Over</div>
+          <div id="game-over-stats">Distance: 0 m<br />Time: 00:00.00</div>
           <button id="restart-button">Restart</button>
           <div class="restart-hint">Press Enter to restart</div>
         </div>
