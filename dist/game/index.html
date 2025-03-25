@@ -32,23 +32,30 @@
       gtag("config", "G-BFXX4YGN2J");
     </script>
     <!-- End Google Analytics -->
-    <script type="module" crossorigin src="/game/assets/main-Cz2LJ_S0.js"></script>
-    <link rel="stylesheet" crossorigin href="/game/assets/main-B0cgA7XK.css">
+    <script type="module" crossorigin src="/game/assets/main-Cng0cgzc.js"></script>
+    <link rel="stylesheet" crossorigin href="/game/assets/main-uVQu4rnb.css">
   </head>
   <body>
     <div class="game-container-wrapper">
       <div class="aspect-ratio-box">
         <div id="game-container"></div>
         <div id="score">Distance: 0 m<br />Time: 00:00.00</div>
+        <div id="track-display">♪ No Track Playing ♪</div>
         <div id="splash-screen">
           <div id="paused-indicator">PAUSED</div>
           <div id="splash-title">Super Block Boy Marathon</div>
           <div id="ai-tagline">An AI coded auto-runner</div>
           <div id="controls-info">
-            <p>SPACE - Jump</p>
-            <p>← OR A - Walk</p>
-            <p>→ OR D - Run</p>
-            <p>ENTER - Pause</p>
+            <div class="controls-column">
+              <p>SPACE - Jump</p>
+              <p>← OR A - Walk</p>
+              <p>→ OR D - Run</p>
+              <p>ENTER - Pause</p>
+            </div>
+            <div class="controls-column">
+              <p>M - Toggle Music</p>
+              <p>N - Next Track</p>
+            </div>
           </div>
           <button id="start-button">Start</button>
           <div class="start-hint">Press Enter to start</div>
