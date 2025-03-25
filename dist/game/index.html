@@ -32,42 +32,44 @@
       gtag("config", "G-BFXX4YGN2J");
     </script>
     <!-- End Google Analytics -->
-    <script type="module" crossorigin src="/game/assets/main-CXQIhUpg.js"></script>
-    <link rel="stylesheet" crossorigin href="/game/assets/main-uVQu4rnb.css">
+    <script type="module" crossorigin src="/game/assets/main-qnrXW_RR.js"></script>
+    <link rel="stylesheet" crossorigin href="/game/assets/main-DlU_oIDx.css">
   </head>
   <body>
-    <div class="game-container-wrapper">
-      <div class="aspect-ratio-box">
-        <div id="game-container"></div>
-        <div id="score">Distance: 0 m<br />Time: 00:00.00</div>
-        <div id="track-display">♪ No Track Playing ♪</div>
-        <div id="splash-screen">
-          <div id="paused-indicator">PAUSED</div>
-          <div id="splash-title">Super Block Boy Marathon</div>
-          <div id="ai-tagline">An AI coded auto-runner</div>
-          <div id="controls-info">
-            <div class="controls-column">
-              <p>SPACE - Jump</p>
-              <p>← OR A - Walk</p>
-              <p>→ OR D - Run</p>
-              <p>ENTER - Pause</p>
+    <div class="game-area">
+      <div class="game-container-wrapper">
+        <div class="aspect-ratio-box">
+          <div id="game-container"></div>
+          <div id="score">Distance: 0 m<br />Time: 00:00.00</div>
+          <div id="track-display">♪ No Track Playing ♪</div>
+          <div id="splash-screen">
+            <div id="paused-indicator">PAUSED</div>
+            <div id="splash-title">Super Block Boy Marathon</div>
+            <div id="ai-tagline">An AI coded auto-runner</div>
+            <div id="controls-info">
+              <div class="controls-column">
+                <p>SPACE - Jump</p>
+                <p>← OR A - Walk</p>
+                <p>→ OR D - Run</p>
+                <p>ENTER - Pause</p>
+              </div>
+              <div class="controls-column">
+                <p>M - Toggle Music</p>
+                <p>N - Next Track</p>
+              </div>
             </div>
-            <div class="controls-column">
-              <p>M - Toggle Music</p>
-              <p>N - Next Track</p>
+            <button id="start-button">Start</button>
+            <div class="start-hint">Press Enter to start</div>
+            <div class="steam-release">
+              Super Block Boy and Friends releases on Steam March 28
             </div>
           </div>
-          <button id="start-button">Start</button>
-          <div class="start-hint">Press Enter to start</div>
-          <div class="steam-release">
-            Super Block Boy and Friends releases on Steam March 28
+          <div id="game-over">
+            <div id="game-over-message">Game Over</div>
+            <div id="game-over-stats">Distance: 0 m<br />Time: 00:00.00</div>
+            <button id="restart-button">Restart</button>
+            <div class="restart-hint">Press Enter to restart</div>
           </div>
-        </div>
-        <div id="game-over">
-          <div id="game-over-message">Game Over</div>
-          <div id="game-over-stats">Distance: 0 m<br />Time: 00:00.00</div>
-          <button id="restart-button">Restart</button>
-          <div class="restart-hint">Press Enter to restart</div>
         </div>
       </div>
     </div>
