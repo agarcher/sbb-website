@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
     />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+    <meta name="screen-orientation" content="landscape" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>Super Block Boy Marathon</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -32,91 +36,124 @@
       gtag("config", "G-BFXX4YGN2J");
     </script>
     <!-- End Google Analytics -->
-    <script type="module" crossorigin src="/game/assets/main-CHeeY-Pp.js"></script>
-    <link rel="stylesheet" crossorigin href="/game/assets/main-DlU_oIDx.css">
+    <script type="module" crossorigin src="/game/assets/main-BXj9GAKy.js"></script>
+    <link rel="stylesheet" crossorigin href="/game/assets/main-Dqc9i3GI.css">
   </head>
   <body>
+    <div id="loading-overlay"></div>
     <div class="game-area">
-      <div class="game-container-wrapper">
-        <div class="aspect-ratio-box">
-          <div id="game-container"></div>
-          <div id="score">Distance: 0 m<br />Time: 00:00.00</div>
-          <div id="track-display">♪ No Track Playing ♪</div>
-          <div id="splash-screen">
-            <div id="paused-indicator">PAUSED</div>
-            <div id="splash-title">Super Block Boy Marathon</div>
-            <div id="ai-tagline">An AI coded auto-runner</div>
-            <div id="controls-info">
-              <div class="controls-column">
-                <p>SPACE - Jump</p>
-                <p>← OR A - Walk</p>
-                <p>→ OR D - Run</p>
-                <p>ENTER - Pause</p>
-              </div>
-              <div class="controls-column">
-                <p>M - Toggle Music</p>
-                <p>N - Next Track</p>
-              </div>
-            </div>
-            <button id="start-button">Start</button>
-            <div class="start-hint">Press Enter to start</div>
-            <div class="steam-release">
-              Super Block Boy and Friends releases on Steam March 28
-            </div>
+      <div id="game-container"></div>
+      <div id="score">Distance: 0 m<br />Time: 00:00.00</div>
+      <div id="track-display">♪ No Track Playing ♪</div>
+      <button id="mobile-pause" class="mobile-button pause-button">I I</button>
+      <div id="splash-screen">
+        <div id="paused-indicator">PAUSED</div>
+        <div id="splash-title">Super Block Boy Marathon</div>
+        <div id="ai-tagline">An AI coded auto-runner</div>
+        <div id="controls-info" class="desktop-controls">
+          <div class="controls-column">
+            <p>SPACE - Jump</p>
+            <p>← OR A - Walk</p>
+            <p>→ OR D - Run</p>
+            <p>ENTER - Pause</p>
           </div>
-          <div id="game-over">
-            <div id="game-over-message">Game Over</div>
-            <div id="game-over-stats">Distance: 0 m<br />Time: 00:00.00</div>
-            <button id="restart-button">Restart</button>
-            <div class="restart-hint">Press Enter to restart</div>
+          <div class="controls-column">
+            <p>M - Toggle Music</p>
+            <p>N - Next Track</p>
           </div>
         </div>
+        <div id="mobile-controls-info" class="mobile-controls-info">
+          <p>Tap anywhere to jump</p>
+        </div>
+        <button id="start-button">Start</button>
+        <button id="fullscreen-button" class="action-button">Fullscreen</button>
+        <div class="start-hint">Press Enter to start</div>
+        <div class="steam-release">
+          Super Block Boy and Friends releases on Steam March 28
+        </div>
+        <a
+          href="https://store.steampowered.com/app/3276900/Super_Block_Boy_and_Friends/"
+          target="_blank"
+          class="wishlist-link"
+          >Wishlist today</a
+        >
+      </div>
+      <div id="game-over">
+        <div id="game-over-message">Game Over</div>
+        <div id="game-over-stats">Distance: 0 m<br />Time: 00:00.00</div>
+        <button id="restart-button">Restart</button>
+        <div class="restart-hint">Press Enter to restart</div>
+      </div>
+    </div>
+    <div id="mobile-controls" class="mobile-controls">
+      <div class="speed-controls">
+        <button id="speed-up" class="mobile-button speed-button">
+          <span class="button-icon">+</span>
+          <span class="button-label">Run</span>
+        </button>
+        <button id="speed-down" class="mobile-button speed-button">
+          <span class="button-icon">-</span>
+          <span class="button-label">Walk</span>
+        </button>
       </div>
     </div>
     <a
       target="_blank"
       href="https://store.steampowered.com/app/3276900/Super_Block_Boy_and_Friends/"
-      style="
-        font-family: 'system-ui', sans-serif;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        padding: 7px;
-        font-size: 14px;
-        font-weight: bold;
-        background: #fff;
-        color: #000;
-        text-decoration: none;
-        border-top-right-radius: 12px;
-        z-index: 10000;
-        border: 1px solid #fff;
-        display: flex;
-        align-items: center;
-      "
+      class="fixed-link steam-link"
     >
-      <img src="/favicon-32x32.png" style="height: 16px; margin-right: 5px" />
+      <img
+        src="/favicon-32x32.png"
+        alt="Super Block Boy icon"
+        class="link-icon"
+      />
       Super Block Boy and Friends releases March 28th!
     </a>
     <a
       target="_blank"
       href="https://jam.pieter.com"
-      style="
-        font-family: 'system-ui', sans-serif;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        padding: 7px;
-        font-size: 14px;
-        font-weight: bold;
-        background: #fff;
-        color: #000;
-        text-decoration: none;
-        border-top-left-radius: 12px;
-        z-index: 10000;
-        border: 1px solid #fff;
-      "
-      >🕹️ Vibe Jam 2025</a
+      class="fixed-link jam-link"
+    >
+      🕹️ Vibe Jam 2025</a
     >
 
+    <div id="bottom-space"></div>
+
+    <!-- Rotation prompt overlay -->
+    <div id="rotate-device">
+      <svg
+        width="80"
+        height="80"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20Z"
+          stroke="white"
+          stroke-width="2"
+        />
+        <path
+          d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+          stroke="white"
+          stroke-width="2"
+        />
+        <path d="M17 1V4M7 1V4M1 8H22" stroke="white" stroke-width="2" />
+      </svg>
+      <p>Please rotate your device for the best experience</p>
+    </div>
+
+    <!-- iOS Add to Home Screen message -->
+    <div id="add-to-home-screen">
+      <div class="message">
+        <div class="icon">📱</div>
+        <h2>Full Screen Mode</h2>
+        <p>For the best experience:</p>
+        <p>1. Tap the share button</p>
+        <p>2. Select "Add to Home Screen"</p>
+        <p>3. Launch from your home screen</p>
+        <button class="dismiss-button">Continue in Browser</button>
+      </div>
+    </div>
   </body>
 </html>
