@@ -1,89 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auto-Runner Game</title>
-    <style>
-      body {
-        margin: 0;
-        overflow: hidden;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .game-container-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 1777.78px; /* 1000px height * 16/9 aspect ratio */
-        max-height: 1000px;
-      }
-      .aspect-ratio-box {
-        padding-top: 56.25%; /* 9/16 = 0.5625 = 56.25% */
-        position: relative;
-        width: 100%;
-      }
-      #game-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-      #score {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        color: white;
-        font-family: Arial, sans-serif;
-        font-size: 24px;
-        z-index: 100;
-      }
-      #game-over {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-family: Arial, sans-serif;
-        font-size: 48px;
-        text-align: center;
-        display: none;
-        z-index: 100;
-      }
-      #game-over-message {
-        margin-bottom: 20px;
-      }
-      #restart-button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 20px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .debug-hint {
-        font-size: 14px;
-        margin-top: 20px;
-        opacity: 0.7;
-      }
-    </style>
-    <script type="module" crossorigin src="/game/assets/main-DPILW-Lo.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Super Block Boy Marathon</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      http-equiv="refresh"
+      content="3; url=https://marathon.omiigames.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div class="game-container-wrapper">
-      <div class="aspect-ratio-box">
-        <div id="game-container"></div>
-        <div id="score">Score: 0</div>
-        <div id="game-over">
-          <div id="game-over-message">Game Over</div>
-          <button id="restart-button">Restart</button>
-        </div>
+
+  <body class="font-press-start" style="background-color: #829eae">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+      <div
+        class="text-center p-8 bg-black border-[20px] border-[rgb(153,51,204)]"
+      >
+        <h1 class="text-xl md:text-2xl mb-6 leading-relaxed text-white">
+          Super Block Boy Marathon has moved
+        </h1>
+        <p class="text-base md:text-lg leading-relaxed text-white">
+          Redirecting to
+          <a
+            href="https://marathon.omiigames.com"
+            class="text-[rgb(153,51,204)] hover:opacity-80 transition-opacity duration-300"
+          >
+            marathon.omiigames.com
+          </a>
+        </p>
       </div>
     </div>
   </body>
